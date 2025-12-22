@@ -8,8 +8,8 @@
     "node": ">19.0.0"
   },
   "scripts": {
-    "dev": "NODE_ENV='development' nodemon server.ts",
-    "prod": "tsc && npm run copyFiles && NODE_ENV='production' node ./dist/server.js",
+    "dev": "set NODE_ENV=development && npx nodemon server.ts",
+    "prod": "tsc && npm run copyFiles && set NODE_ENV=production && node ./dist/server.js",
     "copyFiles": "cp -r public dist/ && cp utils/google-services.json dist/utils/",
     "docs": "npx insomnia-documenter --config ./docs/export.json --output ./docs/"
   },
